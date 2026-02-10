@@ -1,0 +1,5 @@
+.venv/
+*.retry
+*.log
+__pycache__/
+.cache/
