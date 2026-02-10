@@ -1,0 +1,8 @@
+- name: Install common packages
+  package:
+    name: "{{ common_packages }}"
+    state: present
+
+- name: Set timezone via timedatectl
+  command: timedatectl set-timezone {{ timezone_name }}
+  changed_when: false
