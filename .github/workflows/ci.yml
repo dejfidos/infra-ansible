@@ -27,4 +27,9 @@ jobs:
       - name: Ansible lint
         run: ansible-lint
       - name: Playbook syntax check
-        run: ansible-playbook -i inventories/dev/hosts.ini playbooks/site.yml --syntax-check --roles-path roles
+        run: |
+          ansible-playbook \
+            -i inventories/dev/hosts.ini \
+            playbooks/site.yml \
+            --syntax-check \
+            --roles-path roles
