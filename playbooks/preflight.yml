@@ -1,3 +1,4 @@
+---
 - name: Preflight checks
   hosts: servers
   become: true

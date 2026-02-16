@@ -1,3 +1,4 @@
+---
 # load vault vars
 # (promene z vault.yml budou dostupne automaticky, kdyz je soubor v group_vars
 # balicky co chceme na kazdem serveru

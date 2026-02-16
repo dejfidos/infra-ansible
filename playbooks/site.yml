@@ -1,3 +1,4 @@
+---
 - name: Baseline configuration for all servers
   hosts: servers
   become: true
