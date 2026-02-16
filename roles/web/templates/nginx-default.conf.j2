@@ -1,0 +1,8 @@
+server {
+	listen {{ nginx_listen_port }};
+	server_name {{ nginx_server_name }};
+
+	location / {
+		return 200 "OK from {{ inventory_hostname }}\n";
+	}
+}

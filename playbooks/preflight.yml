@@ -1,0 +1,16 @@
+- name: Preflight checks
+  hosts: servers
+  become: true
+  gather_facts: true
+  tasks:
+    - name: Check connectivity
+      ansible.builtin.ping:
+
+    - name: Check sudo works
+      ansible.builtin.command: whoami
+      register: who
+      changed_when: false
+
+    - name: Show become user
+      ansible.builtin.debug:
+        var: who.stdout

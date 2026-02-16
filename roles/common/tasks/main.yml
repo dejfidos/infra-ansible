@@ -1,8 +1,14 @@
 - name: Install common packages
-  package:
+  ansible.builtin.package:
     name: "{{ common_packages }}"
     state: present
+  tags:
+    - common
+    - packages
 
 - name: Set timezone via timedatectl
-  command: timedatectl set-timezone {{ timezone_name }}
+  ansible.builtin.command: timedatectl set-timezone {{ timezone_name }}
   changed_when: false
+  tags:
+    - common
+    - timezone

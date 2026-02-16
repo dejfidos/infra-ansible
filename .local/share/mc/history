@@ -1,0 +1,10 @@
+[cmdline]
+0=
+
+[Dir Hist New Right Panel]
+0=/home/admin
+
+[Dir Hist New Left Panel]
+0=/home/admin/.ansible
+1=/home/admin
+2=/home/admin/test

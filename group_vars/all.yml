@@ -1,8 +1,0 @@
-#balicky co chceme na kazdem serveru
-common_packages:
-  - curl
-  - vim
-  - htop
-
-#casova zona
-timezone_name: Europe/Prague
