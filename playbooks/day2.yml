@@ -1,9 +1,9 @@
 ---
-  name: Day2 - remote setup
+- name: Day2 - remote setup
   hosts: servers
   become: true
   tasks:
-      name: Install curl
+    - name: Install curl
       ansible.builtin.package:
         name: curl
         state: present
