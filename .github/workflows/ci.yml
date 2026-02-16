@@ -28,8 +28,5 @@ jobs:
         run: ansible-lint
       - name: Playbook syntax check
         run: |
-          ansible-playbook \
-            -i inventories/dev/hosts.ini \
-            playbooks/site.yml \
-            --syntax-check \
-            --roles-path roles
+          export ANSIBLE_ROLES_PATH=roles
+          ansible-playbook -i inventories/ddev/hosts.ini playbooks/site.yml --syntax-check
