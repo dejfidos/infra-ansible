@@ -26,4 +26,3 @@ jobs:
         run: ansible-lint
       - name: Playbook syntax check
         run: ansible-playbook playbooks/site.yml --syntax-check
-
