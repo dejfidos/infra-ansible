@@ -29,4 +29,5 @@ jobs:
       - name: Playbook syntax check
         run: |
           export ANSIBLE_ROLES_PATH=roles
-          ansible-playbook -i inventories/ddev/hosts.ini playbooks/site.yml --syntax-check
+          ansible-playbook -i inventories/dev/hosts.ini \
+          playbooks/site.yml --syntax-check
