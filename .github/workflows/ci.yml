@@ -8,6 +8,8 @@ name: CI
 
 jobs:
   lint:
+    env:
+      ANSIBLE_CONFIG: ansible.cfg
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -25,4 +27,4 @@ jobs:
       - name: Ansible lint
         run: ansible-lint
       - name: Playbook syntax check
-        run: ansible-playbook playbooks/site.yml --syntax-check
+        run: ansible-playbook -i inventories/dev/hosts.ini playbooks/site.yml --syntax-check --roles-path roles
